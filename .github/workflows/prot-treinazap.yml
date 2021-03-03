@@ -1,9 +1,10 @@
 name: PROT-TREINAZAP - PROD - PARA S3
 
 on:
-  release:
-    types: [commit]
-
+  push:
+    branch:
+      - master
+      
 jobs:
   build:
     runs-on: ubuntu-latest
