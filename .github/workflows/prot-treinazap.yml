@@ -1,4 +1,4 @@
-name: PROT-TREINAZAP - PROD - PARA S3
+name: Deploy PROTZAP - S3
 
 on:
   push:
