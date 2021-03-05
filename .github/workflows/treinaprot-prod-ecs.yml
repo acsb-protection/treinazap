@@ -26,9 +26,9 @@ jobs:
         run: npm install && npm run build
         env:
            CI: "false"
-     # - name: BAIXANDO SONAR
+     #- name: BAIXANDO SONAR
      #   run: wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.0.2311-linux.zip && unzip sonar-scanner-cli-4.6.0.2311-linux.zip
-     # - name: ANALYSYS CODE
+     #- name: ANALYSYS CODE
      #   run: ./sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner -Dsonar.projectKey=treinaprot -Dsonar.sources=. -Dsonar.host.url=http://sonar.treinaprot.tk/ -Dsonar.login=1270a171ef140c745486c37aad938f5d5ee8b69b
       
       
