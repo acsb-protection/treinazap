@@ -50,8 +50,8 @@ jobs:
           ECR_REPOSITORY: 371184842631.dkr.ecr.us-east-1.amazonaws.com/treina-prot
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t treinazap .
-          docker tag treinazap:latest $ECR_REPOSITORY:latest
+          docker build -t treinaprot .
+          docker tag treinaprot:latest $ECR_REPOSITORY:latest
           docker push $ECR_REPOSITORY:latest
             
             
