@@ -53,7 +53,7 @@ jobs:
           docker build -t treina-prot .
           docker tag treina-prot:latest $ECR_REPOSITORY:latest
           docker push $ECR_REPOSITORY:latest
-          aws ecs update-service --cluster prottech --service treina-prot --force-new-deployment --region us-east-1    
+            
             
       - name: CLEAR CACHE
         run: AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY} aws cloudfront create-invalidation --distribution-id EUF9TTFYFEM6M --path '/*'
