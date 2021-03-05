@@ -53,7 +53,7 @@ jobs:
           docker build -t prot-treinazap .
           docker tag prot-treinazap:latest $ECR_REPOSITORY:latest
           docker push $ECR_REPOSITORY:latest
-            
+          aws ecs update-service --cluster prottech --service treinaprot --force-new-deployment --region us-east-1  
             
       - name: CLEAR CACHE
         run: AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY} aws cloudfront create-invalidation --distribution-id EUF9TTFYFEM6M --path '/*'
