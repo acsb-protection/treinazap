@@ -50,10 +50,10 @@ jobs:
           ECR_REPOSITORY: 371184842631.dkr.ecr.us-east-1.amazonaws.com/treina-prot
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t treinaprot .
-          docker tag treinaprot:latest $ECR_REPOSITORY:latest
+          docker build -t treina-prot .
+          docker tag treina-prot:latest $ECR_REPOSITORY:latest
           docker push $ECR_REPOSITORY:latest
-          aws ecs update-service --cluster prottech --service treinaprot --force-new-deployment --region us-east-1    
+          aws ecs update-service --cluster prottech --service treina-prot --force-new-deployment --region us-east-1    
             
       - name: CLEAR CACHE
         run: AWS_ACCESS_KEY_ID=${ACCESS_KEY} AWS_SECRET_ACCESS_KEY=${SECRET_KEY} aws cloudfront create-invalidation --distribution-id EUF9TTFYFEM6M --path '/*'
